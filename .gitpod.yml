@@ -24,6 +24,6 @@ tasks:
       make 
       sudo make install
 
-  - init: cmake .
+    init: cmake .
 
 
