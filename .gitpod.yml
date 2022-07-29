@@ -10,7 +10,7 @@ tasks:
       sudo apt-get install libusb-1.0-0-dev -y
       sudo apt-get install mpi-default-dev openmpi-bin openmpi-common -y
       sudo apt-get install libpcap-dev -y
-      sudo apt-get install libflann1.8 libflann-dev -y
+      sudo apt-get install libflann-dev -y
       sudo apt-get install libeigen3-dev -y
       sudo apt-get install libopenni2-dev -y
       sudo apt-get install libqhull7 libqhull-dev -y
