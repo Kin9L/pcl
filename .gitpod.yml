@@ -26,8 +26,8 @@ tasks:
       make 
       sudo make install
       cd ..
-      cmake .
-      make -j10
+      cmake -DBUILD_global_tests=ON .
+      make -j16
 
     init: echo "Done"
 
