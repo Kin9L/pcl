@@ -236,7 +236,9 @@ namespace pcl
 
         // libstdc++ (GCC) on calling reserve allocates new memory, copies and deallocates old vector
         // This causes a drastic performance hit. Prefer not to use reserve with libstdc++ (default on clang)
-        cloud1.insert (cloud1.end (), cloud2.begin (), cloud2.end ());
+        cloud1.reserve(cloud1.size() + cloud2.size());
+//        cloud1.insert (cloud1.end (), cloud2.begin (), cloud2.end ());
+        std::copy(cloud2.begin(), cloud2.end(), std::back_inserter(cloud1));
 
         cloud1.width    = cloud1.size ();
         cloud1.height   = 1;

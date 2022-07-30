@@ -2,6 +2,9 @@
 # Please adjust to your needs (see https://www.gitpod.io/docs/config-gitpod-file)
 # and commit this file to your remote git repository to share the goodness with others.
 
+image:
+  file: .gitpod.Dockerfile
+
 tasks:
   - before: |
       sudo apt update -y
@@ -18,7 +21,7 @@ tasks:
       sudo apt-get install libxmu-dev libxi-dev -y
       sudo apt-get install openjdk-8-jdk openjdk-8-jre -y
       sudo apt-get install libboost-all-dev -y
-      sudo apt install libgtest-dev -y
+      sudo apt-get install libgtest-dev -y
       wget https://www.coin-or.org/download/source/metslib/metslib-0.5.3.tgz
       tar xzvf metslib-0.5.3.tgz
       cd metslib-0.5.3
