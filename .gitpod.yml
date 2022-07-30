@@ -5,5 +5,20 @@
 image:
   file: .gitpod.Dockerfile
 
+tasks:
+  - before: |
+      sudo apt install g++-10 gcc-10 -y
+      cd /workspace
+      git clone https://github.com/rui314/mold.git
+      cd mold
+      make -j16 CXX=g++-10
+      sudo make install
+      cd ../
+      mkdir build
+      cd build
+      cmake -DBUILD_global_tests=ON ../pcl
+      mold -run make -j16
+      
+    
 
 
